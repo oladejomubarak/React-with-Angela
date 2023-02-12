@@ -17,12 +17,12 @@ body {
 .container {
   margin: 10% auto;
   padding: 80px 0;
-  text-align: center;
+  text-align:center;
 }
 
 .container h1 {
-  font-size: 40px;
-  font-weight: 200;
+  font-size: 100px;
+  font-weight: 500;
 }
 
 form {
@@ -54,4 +54,17 @@ form button {
   border-radius: 3px;
   width: 250px;
   font-size: 18px;
+}
+
+button {
+  display: inline-block;
+  background-color: red;
+  border: 0;
+  border-radius: 30%;
+  width: 150px;
+  margin: 50px;
+  text-align:center;
+  color: #fff;
+  font-weight: bold;
+  font-size: 30px;
 }
