@@ -7,19 +7,20 @@ import React, {useState} from "react";
 //var isLoggedIn= false;
 
 function App() {
+  
 
 
-  const now = new Date().toLocaleTimeString();
+  // const now = new Date().toLocaleTimeString();
 
-  const [time, setTime] = useState(now);
+  // const [time, setTime] = useState(now);
 
-  function getTime(){
-    const newTime = new Date().toLocaleTimeString();
-    setTime(newTime);
+  // function getTime(){
+  //   const newTime = new Date().toLocaleTimeString();
+  //   setTime(newTime);
 
-  }
+  // }
 
-  setInterval(getTime, 1000);
+  // setInterval(getTime, 1000);
   // const [count, setCount] = useState(0);
 
   // function increaseCountByOne(){
@@ -35,10 +36,25 @@ function App() {
   //     setCount(0)
   //   }
   // }
+  const [submit, setSubmit] = useState("hello")
+
+  function setClick(){
+    setSubmit("submitted");
+
+  }
+  const[isMouseOver, setMouseOver] = useState(false)
+
+  function mouseOver(){
+    setMouseOver(true);
+  }
+  function MouseOut(){
+    setMouseOver(false)
+  }
   return (
     <div className="container">
-      <h1>{time}</h1>
-      <button onClick={getTime}>Get time</button>
+      {/* <h1>{time}</h1> */}
+      
+      {/* <button onClick={getTime}>Get time</button> */}
       {/* <h1>{count}</h1>
       
       <button onClick={increaseCountByOne}>+</button>
@@ -47,6 +63,14 @@ function App() {
        */}
       {/* {isLoggedIn ? <h1>Hello</h1> : <Login />
 } */}
+      <h1>{submit}</h1>
+      <input type="text" placeholder="What is your name?" />
+      <button style={{backgroundColor: isMouseOver ? "yellow" : "white"}}
+      onClick={setClick}
+       onMouseOver= {mouseOver} 
+       onMouseOut={MouseOut}>
+        
+        Submit</button>
     </div>
   );
 }
