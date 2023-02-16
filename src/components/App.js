@@ -58,7 +58,7 @@ function App() {
   }
   function handleLname(event){
     const newLname = event.target.value;
-       setFname(newLname);
+       setLname(newLname);
    }
   return (
     <div className="container">
