@@ -36,20 +36,20 @@ function App() {
   //     setCount(0)
   //   }
   // }
-  const [submit, setSubmit] = useState("hello")
+  // const [submit, setSubmit] = useState("hello")
 
-  function setClick(){
-    setSubmit("submitted");
+  // function setClick(){
+  //   setSubmit("submitted");
 
-  }
-  const[isMouseOver, setMouseOver] = useState(false)
+  // }
+  // const[isMouseOver, setMouseOver] = useState(false)
 
-  function mouseOver(){
-    setMouseOver(true);
-  }
-  function MouseOut(){
-    setMouseOver(false)
-  }
+  // function mouseOver(){
+  //   setMouseOver(true);
+  // }
+  // function MouseOut(){
+  //   setMouseOver(false)
+  // }
   return (
     <div className="container">
       {/* <h1>{time}</h1> */}
@@ -63,14 +63,14 @@ function App() {
        */}
       {/* {isLoggedIn ? <h1>Hello</h1> : <Login />
 } */}
-      <h1>{submit}</h1>
+      {/* <h1>{submit}</h1>
       <input type="text" placeholder="What is your name?" />
       <button style={{backgroundColor: isMouseOver ? "yellow" : "white"}}
       onClick={setClick}
        onMouseOver= {mouseOver} 
        onMouseOut={MouseOut}>
         
-        Submit</button>
+        Submit</button> */}
     </div>
   );
 }
