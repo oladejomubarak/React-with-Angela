@@ -50,16 +50,17 @@ function App() {
   // function MouseOut(){
   //   setMouseOver(false)
   // }
-  const [fName, setFname] = useState("");
-  const [lName, setLname] = useState("");
-  function handleFname(event){
-   const newFname = event.target.value;
-      setFname(newFname);
+  const [fullName, setFname] = useState({
+    fName:"",
+    lName:""
+  });
+  function handleFullName(event){
+   
   }
-  function handleLname(event){
-    const newLname = event.target.value;
-       setLname(newLname);
-   }
+  // function handleLname(event){
+  //   const newLname = event.target.value;
+  //      setLname(newLname);
+  //  }
   return (
     <div className="container">
       {/* <h1>{time}</h1> */}
@@ -81,11 +82,12 @@ function App() {
        onMouseOut={MouseOut}>
         
         Submit</button> */}
-<h1>Hello {fName}{lName}</h1>
+<h1>Hello {fullName.fName}{fullName.lName}</h1>
       <form>
-        <input onChange={handleFname} name="fName"
-         placeholder="First Name" value={fName} />
-        <input onChange={handleLname} name="lName" placeholder="Last Name" value={lName} />
+        <input onChange={handleFullName} name="fName"
+         placeholder="First Name" value={fullName.fName} />
+        <input onChange={handleFullName} name="lName" 
+        placeholder="Last Name" value={fullName.lName} />
         <button>Submit</button>
       </form>
 
