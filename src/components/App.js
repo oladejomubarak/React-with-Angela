@@ -54,6 +54,13 @@ function App() {
   });
   function handleInfo(event){
     const {name, value} = event.target;
+
+    setContact(previousValue => {
+      return{
+        ...previousValue,
+        [name]: value
+      }
+    });
     // const newValue = event.target.value;
     // const newInput = event.target.name
     // setContact(previousValue => {
