@@ -55,21 +55,22 @@ function App() {
     lName: "",
     email: ""
   });
-  function handleFname(event){
-    const firstName = event.target.value;
-    setContact(firstName);
+  function handleInfo(event){
+    const newValue = event.target.value;
+    const newInput = event.target.name
+    setContact(previousValue => {
+      if (newInput === "fName"){
+        return{
+        fName: newValue,
+        lName: previousValue.lName,
+        email: previousValue.email
+      };
+      }
+
+    });
 
   }
-  function handleLname(event){
-    const lastName = event.target.value;
-    setContact(lastName);
-
-  }
-  function handleEmail(event){
-    const email = event.target.value;
-    setContact(email);
-
-  }
+  
   // function handleFullName(event){
    
   // }
@@ -84,9 +85,12 @@ function App() {
       </h1>
       <p>{contact.email}</p>
       <form>
-        <input onChange={handleFname} value={contact.fName} name="fName" placeholder="First Name" />
-        <input onChange={handleLname} value={contact.lName} name="lName" placeholder="Last Name" />
-        <input onChange= {handleEmail} value= {contact.email} name="email" placeholder="Email" />
+        <input onChange={handleInfo}  name="fName"
+         placeholder="First Name" value={contact.fName} />
+        <input onChange={handleInfo}  name="lName"
+         placeholder="Last Name" value={contact.lName}/>
+        <input onChange= {handleInfo} name="email" 
+        placeholder="Email" value= {contact.email} />
         <button>Submit</button>
       </form>
 
