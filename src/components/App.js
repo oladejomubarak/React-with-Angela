@@ -65,6 +65,18 @@ function App() {
         lName: previousValue.lName,
         email: previousValue.email
       };
+      } else if(newInput === "lName"){
+        return{
+          fName: previousValue.fName,
+          lName: newValue,
+          email: previousValue.email
+        }
+      } else{
+        return{
+        fName: previousValue.fName,
+        lName: previousValue.lName,
+        email: newValue
+        }
       }
 
     });
