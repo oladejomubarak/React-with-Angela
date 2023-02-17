@@ -50,19 +50,32 @@ function App() {
   // function MouseOut(){
   //   setMouseOver(false)
   // }
-  const [fullName, setFname] = useState({
-    fName:"",
-    lName:""
+  const [contact, setContact] = useState({
+    fName: "",
+    lName: "",
+    email: ""
   });
-  function handleFullName(event){
+  // function handleFullName(event){
    
-  }
+  // }
   // function handleLname(event){
   //   const newLname = event.target.value;
   //      setLname(newLname);
   //  }
   return (
-    <div className="container">
+ <div className="container">
+      <h1>
+        Hello {contact.fName} {contact.lName}
+      </h1>
+      <p>{contact.email}</p>
+      <form>
+        <input name="fName" placeholder="First Name" />
+        <input name="lName" placeholder="Last Name" />
+        <input name="email" placeholder="Email" />
+        <button>Submit</button>
+      </form>
+
+
       {/* <h1>{time}</h1> */}
       
       {/* <button onClick={getTime}>Get time</button> */}
@@ -82,14 +95,14 @@ function App() {
        onMouseOut={MouseOut}>
         
         Submit</button> */}
-<h1>Hello {fullName.fName}{fullName.lName}</h1>
+{/* <h1>Hello {fullName.fName}{fullName.lName}</h1>
       <form>
         <input onChange={handleFullName} name="fName"
          placeholder="First Name" value={fullName.fName} />
         <input onChange={handleFullName} name="lName" 
         placeholder="Last Name" value={fullName.lName} />
         <button>Submit</button>
-      </form>
+      </form> */}
 
     </div>
   );
