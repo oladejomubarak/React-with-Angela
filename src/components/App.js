@@ -7,10 +7,7 @@ import React, {useState} from "react";
 //var isLoggedIn= false;
 
 function App() {
-  
-
-
-  // const now = new Date().toLocaleTimeString();
+    // const now = new Date().toLocaleTimeString();
 
   // const [time, setTime] = useState(now);
 
@@ -78,7 +75,6 @@ function App() {
         email: newValue
         }
       }
-
     });
 
   }
