@@ -53,29 +53,30 @@ function App() {
     email: ""
   });
   function handleInfo(event){
-    const newValue = event.target.value;
-    const newInput = event.target.name
-    setContact(previousValue => {
-      if (newInput === "fName"){
-        return{
-        fName: newValue,
-        lName: previousValue.lName,
-        email: previousValue.email
-      };
-      } else if(newInput === "lName"){
-        return{
-          fName: previousValue.fName,
-          lName: newValue,
-          email: previousValue.email
-        }
-      } else{
-        return{
-        fName: previousValue.fName,
-        lName: previousValue.lName,
-        email: newValue
-        }
-      }
-    });
+    const {name, value} = event.target;
+    // const newValue = event.target.value;
+    // const newInput = event.target.name
+    // setContact(previousValue => {
+    //   if (newInput === "fName"){
+    //     return{
+    //     fName: newValue,
+    //     lName: previousValue.lName,
+    //     email: previousValue.email
+    //   };
+    //   } else if(newInput === "lName"){
+    //     return{
+    //       fName: previousValue.fName,
+    //       lName: newValue,
+    //       email: previousValue.email
+    //     }
+    //   } else{
+    //     return{
+    //     fName: previousValue.fName,
+    //     lName: previousValue.lName,
+    //     email: newValue
+    //     }
+    //   }
+    // });
 
   }
   
