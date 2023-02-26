@@ -109,8 +109,6 @@ function App() {
         placeholder="Email" value= {contact.email} />
         <button>Submit</button>
       </form>
-
-
       {/* <h1>{time}</h1> */}
       
       {/* <button onClick={getTime}>Get time</button> */}
